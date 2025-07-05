@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIZZIE- Style & Trends</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter (or similar sans-serif for the image's font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (if needed, or use inline SVGs) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom scrollbar for horizontal sections */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Custom styling for the top header background gradient if needed */
+        .header-bg-gradient {
+            background: linear-gradient(to right, #e0e0e0, #f0f0f0);
+        }
+        /* Specific styling for the hero section text to match image */
+        .hero-text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Top Header Bar -->
+    <div class="bg-gray-200 text-gray-700 text-xs py-2 px-4 md:px-8 flex justify-between items-center">
+        <span>Free Shipping on All Orders Over $50</span>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="hover:text-gray-900">Contact Us</a>
+            <a href="#" class="hover:text-gray-900">FAQs</a>
+        </div>
+    </div>
+
+    <!-- Main Header / Navigation -->
+    <header class="bg-white shadow-sm py-4 px-4 md:px-8 lg:px-16 flex items-center justify-between sticky top-0 z-50">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-blue-900">
+            LIZZIE
+        </div>
+
+        <!-- Search Bar (Desktop) -->
+        <div class="hidden md:flex flex-grow max-w-md mx-8 relative">
+            <input type="text" placeholder="Search for products..."
+                   class="w-full p-2 pl-10 pr-4 rounded-full bg-gray-100 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-300 text-sm">
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </div>
+
+        <!-- Icons & Mobile Menu -->
+        <div class="flex items-center space-x-4">
+            <a href="https://th.bing.com/th/id/OIP.J-XGcPY77U0ZsZ-vmLz6lAHaHa?w=203&h=202&c=7&r=0&o=7&pid=1.7&rm=3" class="text-gray-600 hover:text-gray-900">
+                <i class="far fa-heart text-xl"></i> <!-- Heart Icon -->
+            </a>
+            <a href="https://th.bing.com/th/id/OIP.iBKTl-z6PmlL6t7pKEUFQAHaHa?w=181&h=181&c=7&r=0&o=7&pid=1.7&rm=" class="text-gray-600 hover:text-gray-900 relative">
+                <i class="fas fa-shopping-bag text-xl"></i> <!-- Shopping Bag Icon -->
+                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+            </a>
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center flex items-center justify-center text-white p-4"
+        style="background-image: url('https://cdn.pixabay.com/photo/2015/03/02/15/48/women-656074_1280.jpg?text=Live+Your+Style');">
+        <!-- Overlay to match the image's dimming -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 text-center">
+            <p class="text-lg md:text-xl font-medium mb-2 hero-text-shadow">LIVE YOUR STYLE</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight hero-text-shadow">
+                DISCOVER THE LATEST TRENDS
+            </h1>
+            <button class="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                SHOP NOW
+            </button>
+        </div>
+    </section>
+
+    <!-- Casual Inspirations Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Casual Inspirations</h2>
+        <p class="text-gray-600 mb-8 max-w-xl">
+            Discover a collection of comfortable yet chic outfits for your everyday adventures.
+        </p>
+
+        <!-- Product Cards Horizontal Scroll -->
+        <div class="flex overflow-x-auto space-x-6 pb-4 no-scrollbar">
+            <!-- Product Card 1 -->
+            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                <img src="https://th.bing.com/th/id/OIP.BnLddh6SLeElHmXg44dVHQHaLz?w=185&h=296&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+1" alt="Casual Dress 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Floral Midi Dress</h3>
+                    <p class="text-gray-600 text-sm mb-2">Lightweight & breathable</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-900 font-bold">$49.99</span>
+                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                <img src="https://th.bing.com/th/id/OIP.Bs6kCkfeFWSJx6R6FOrEDAHaLz?w=185&h=296&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+2" alt="Casual Dress 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Denim Jumpsuit</h3>
+                    <p class="text-gray-600 text-sm mb-2">Effortless style</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-900 font-bold">$65.00</span>
+                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                <img src="https://th.bing.com/th/id/OIP.C-HQBIHPwIMPd9ojnDIU6wHaMl?w=185&h=315&c=7&r=0&o=5&pid=1.7?text=Dress+3" alt="Casual Dress 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Striped Maxi Dress</h3>
+                    <p class="text-gray-600 text-sm mb-2">Perfect for summer</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-900 font-bold">$55.50</span>
+                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.h4J3MN0sDo8RVMZECstoXgHaLG?pid=ImgDet&w=186&h=279&c=7&o=7&rm=3?text=Dress+4" alt="Casual Dress 4" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Boho Mini Dress</h3>
+                    <p class="text-gray-600 text-sm mb-2">Festival ready</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-900 font-bold">$45.00</span>
+                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <!-- Product Card 5 -->
+             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                <img src="https://th.bing.com/th/id/OIP.Jh_EaHMXuNG0QT_llT353QHaLH?w=185&h=278&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+5" alt="Casual Dress 5" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Cotton Shirt Dress</h3>
+                    <p class="text-gray-600 text-sm mb-2">Versatile & comfy</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-900 font-bold">$59.99</span>
+                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Colors Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Trending Colors</h2>
+        <div class="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
+            <!-- Color Swatch 1 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #ef4444;">
+                Red
+            </div>
+            <!-- Color Swatch 2 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #3b82f6;">
+                Blue
+            </div>
+            <!-- Color Swatch 3 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-gray-900 font-semibold text-sm" style="background-color: #facc15;">
+                Yellow
+            </div>
+            <!-- Color Swatch 4 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #10b981;">
+                Green
+            </div>
+            <!-- Color Swatch 5 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #8b5cf6;">
+                Purple
+            </div>
+            <!-- Color Swatch 6 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-gray-900 font-semibold text-sm" style="background-color: #f87171;">
+                Coral
+            </div>
+            <!-- Color Swatch 7 -->
+            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #6b7280;">
+                Charcoal
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+            EXPLORE OUR COLLECTIONS
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Explore Card 1 -->
+            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
+                <img src="https://th.bing.com/th/id/OIP.JDCKl4gRzFqB3HxAXxuH9gHaLX?w=185&h=284&c=7&r=0&o=7&pid=1.7&rm=3?text=Dresses" alt="Dresses Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <p class="text-white text-2xl font-bold">DRESSES</p>
+                </div>
+            </a>
+            <!-- Explore Card 2 -->
+            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
+                <img src="https://th.bing.com/th/id/OIP.lp7cGxPeQgJMFY2JLb6r7gHaLH?w=127&h=191&c=7&r=0&o=5&pid=1.7?text=Tops" alt="Tops Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <p class="text-white text-2xl font-bold">TOPS</p>
+                </div>
+            </a>
+            <!-- Explore Card 3 -->
+            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
+                <img src="https://th.bing.com/th/id/OIP.nW8Va2jR-Ot0F3Sf99TmogHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7?text=Bottoms" alt="Bottoms Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <p class="text-white text-2xl font-bold">BOTTOMS</p>
+                </div>
+            </a>
+            <!-- Explore Card 4 -->
+            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
+                <img src="https://th.bing.com/th/id/OIP.p36AC1X02jMtPDsAApsW8wHaJ6?w=185&h=248&c=7&r=0&o=5&pid=1.7?text=Outerwear" alt="Outerwear Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <p class="text-white text-2xl font-bold">OUTERWEAR</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    
+
+    <!-- Why Shop With Us Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+            WHY YOU'LL LOVE TO SHOP WITH US
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
+                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895-3-2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Products</h3>
+                <p class="text-gray-600">We source only the finest materials to ensure lasting quality and comfort.</p>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
+                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Secure Payments</h3>
+                <p class="text-gray-600">Shop with confidence using our secure and encrypted payment gateways.</p>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
+                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Excellent Support</h3>
+                <p class="text-gray-600">Our dedicated customer service team is here to assist you 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Picks Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-900 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">TRENDING PICKS</h2>
+        <div class="relative w-full max-w-4xl mx-auto h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.cbEXkheihyoubXP3SwpUfwHaFA?pid=ImgDet&w=186&h=126&c=7&o=7&rm=3?text=Your+Only+Limit+Is+Your+Imagination" alt="Trending Picks" class="w-full h-full object-cover object-center opacity-70">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                <p class="text-lg md:text-xl font-medium mb-2 hero-text-shadow">YOUR ONLY LIMIT IS</p>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight hero-text-shadow">
+                    YOUR IMAGINATION
+                </h3>
+                <button class="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                    SHOP NOW
+                </button>
+            </div>
+        </div>
+    </section>
+     <!-- New E-commerce Card Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-100 flex justify-center items-center">
+        <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Discover Your Dream Dress!</h3>
+            <p class="text-gray-600 mb-6">Enter your email to get exclusive updates on new dress arrivals and special offers.</p>
+            <form class="flex flex-col sm:flex-center gap-4">
+                <input type="email" placeholder="type your email here"
+                       class="flex-grow p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-800 placeholder-gray-400">
+                <button type="submit" class="bg-gray-900 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-gray-700 transition-colors duration-300">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+      <!-- FAQs Section -->
+    <section id="faqs-section" class="py-12 px-4 md:px-8 lg:px-8 bg-white">
+        <h2 class="text-3xl md:text-2xl font-bold text-gray-900 text-center mb-12">
+            FREQUENTLY ASKED QUESTIONS
+        </h2>
+        <div class="max-w-2xl mx-auto space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div class="faq-question flex justify-between items-center cursor-pointer">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-0">What is your return policy?</h3>
+                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">We offer a 30-day return policy for all unworn and unwashed items with original tags attached. Please see our Shipping & Returns page for more details.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div class="faq-question flex justify-between items-center cursor-pointer">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-0">How long does shipping take?</h3>
+                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Standard shipping typically takes 5-7 business days. Expedited options are available at checkout for faster delivery.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div class="faq-question flex justify-between items-center cursor-pointer">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-0">Do you offer international shipping?</h3>
+                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Yes, we ship internationally to most countries. Shipping costs and delivery times vary by destination and will be calculated at checkout.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div class="faq-question flex justify-between items-center cursor-pointer">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-0">How can I track my order?</h3>
+                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Once your order has shipped, you will receive a confirmation email with a tracking number. You can use this number on our "Track Your Order" page.</p>
+                </div>
+            </div>
+            <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling; // Get the next sibling, which is the faq-answer div
+                    const icon = question.querySelector('.faq-icon');
+
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        icon.classList.remove('rotate');
+                    } else {
+                        answer.style.display = 'block';
+                        icon.classList.add('rotate');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 px-4 md:px-8 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <!-- Shop Column -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">SHOP</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Dresses</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Tops</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Bottoms</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Sale</a></li>
+                </ul>
+            </div>
+
+            <!-- About Column -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">ABOUT</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Sustainability</a></li>
+                </ul>
+            </div>
+
+            <!-- Help Column -->
+            
+           <div>
+                <h4 class="text-lg font-semibold text-white mb-4">HELP</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#faqs-section" class="hover:text-white transition-colors duration-200">FAQs</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Shipping & Delivery</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Returns & Exchanges</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Size Guide</a></li>
+                </ul>
+            </div>
+
+
+
+
+            <!-- Contact & Social Column -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">CONTACT US</h4>
+                <p class="text-sm mb-2">Email: support@lizzie.com</p>
+                <p class="text-sm mb-4">Phone: +254 (0707170030)</p>
+                <div class="flex space-x-4">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.1inQtfBa5Hk-kiN1SE0stgHaHa?pid=ImgDet&w=186&h=186&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://tse4.mm.bing.net/th/id/OIP.zvSmXMXm2kzd7rTtpc50UgHaEK?pid=ImgDet&w=186&h=105&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://tse3.mm.bing.net/th/id/OIP.2mXmCN5ZhqsMKkXeP6jPagAAAA?pid=ImgDet&w=186&h=186&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 pt-8 text-center text-sm">
+            &copy; 2025 LIZZIE. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
