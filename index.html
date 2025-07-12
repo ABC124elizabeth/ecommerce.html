@@ -3,437 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIZZIE- Style & Trends</title>
+    <title>Website Creator Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter (or similar sans-serif for the image's font) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (if needed, or use inline SVGs) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background-color: #1a1a1a; /* Dark background */
+            color: #f0f0f0; /* Light text */
         }
-        /* Custom scrollbar for horizontal sections */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+        ::-webkit-scrollbar-track {
+            background: #2a2a2a;
+            border-radius: 10px;
         }
-        /* Custom styling for the top header background gradient if needed */
-        .header-bg-gradient {
-            background: linear-gradient(to right, #e0e0e0, #f0f0f0);
+        ::-webkit-scrollbar-thumb {
+            background: #ff7e00; /* Orange scrollbar */
+            border-radius: 10px;
         }
-        /* Specific styling for the hero section text to match image */
-        .hero-text-shadow {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e66a00;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="antialiased">
 
-    <!-- Top Header Bar -->
-    <div class="bg-gray-200 text-gray-700 text-xs py-2 px-4 md:px-8 flex justify-between items-center">
-        <span>Free Shipping on All Orders Over $50</span>
-        <div class="flex items-center space-x-4">
-            <a href="#" class="hover:text-gray-900">Contact Us</a>
-            <a href="#" class="hover:text-gray-900">FAQs</a>
-        </div>
-    </div>
-
-    <!-- Main Header / Navigation -->
-    <header class="bg-white shadow-sm py-4 px-4 md:px-8 lg:px-16 flex items-center justify-between sticky top-0 z-50">
-        <!-- Logo -->
-        <div class="text-2xl font-bold text-blue-900">
-            LIZZIE
-        </div>
-
-        <!-- Search Bar (Desktop) -->
-        <div class="hidden md:flex flex-grow max-w-md mx-8 relative">
-            <input type="text" placeholder="Search for products..."
-                   class="w-full p-2 pl-10 pr-4 rounded-full bg-gray-100 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-300 text-sm">
-            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-        </div>
-
-        <!-- Icons & Mobile Menu -->
-        <div class="flex items-center space-x-4">
-            <a href="https://th.bing.com/th/id/OIP.J-XGcPY77U0ZsZ-vmLz6lAHaHa?w=203&h=202&c=7&r=0&o=7&pid=1.7&rm=3" class="text-gray-600 hover:text-gray-900">
-                <i class="far fa-heart text-xl"></i> <!-- Heart Icon -->
-            </a>
-            <a href="https://th.bing.com/th/id/OIP.iBKTl-z6PmlL6t7pKEUFQAHaHa?w=181&h=181&c=7&r=0&o=7&pid=1.7&rm=" class="text-gray-600 hover:text-gray-900 relative">
-                <i class="fas fa-shopping-bag text-xl"></i> <!-- Shopping Bag Icon -->
-                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
-            </a>
-            <!-- Hamburger Menu (Mobile) -->
-            <button class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
-                <i class="fas fa-bars text-xl"></i>
+    <!-- Header Section -->
+    <header class="bg-[#1a1a1a] py-6 px-4 md:px-8 lg:px-16">
+        <nav class="flex justify-between items-center max-w-5xl mx-auto">
+            <div class="text-2xl font-bold text-[#ff7e00]">Web Creator</div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="text-white hover:text-[#ff7e00] transition duration-300">Home</a></li>
+                <li><a href="#services" class="text-white hover:text-[#ff7e00] transition duration-300">Services</a></li>
+                <li><a href="#about" class="text-white hover:text-[#ff7e00] transition duration-300">About Me</a></li>
+                <li><a href="#portfolio" class="text-white hover:text-[#ff7e00] transition duration-300">Portfolio</a></li>
+                <li><a href="#contact" class="text-white hover:text-[#ff7e00] transition duration-300">Contact Me</a></li>
+            </ul>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center flex items-center justify-center text-white p-4"
-        style="background-image: url('https://cdn.pixabay.com/photo/2015/03/02/15/48/women-656074_1280.jpg?text=Live+Your+Style');">
-        <!-- Overlay to match the image's dimming -->
-        <div class="absolute inset-0 bg-black opacity-30"></div>
-        <div class="relative z-10 text-center">
-            <p class="text-lg md:text-xl font-medium mb-2 hero-text-shadow">LIVE YOUR STYLE</p>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight hero-text-shadow">
-                DISCOVER THE LATEST TRENDS
-            </h1>
-            <button class="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                SHOP NOW
-            </button>
-        </div>
-    </section>
-
-    <!-- Casual Inspirations Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-white">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Casual Inspirations</h2>
-        <p class="text-gray-600 mb-8 max-w-xl">
-            Discover a collection of comfortable yet chic outfits for your everyday adventures.
-        </p>
-
-        <!-- Product Cards Horizontal Scroll -->
-        <div class="flex overflow-x-auto space-x-6 pb-4 no-scrollbar">
-            <!-- Product Card 1 -->
-            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-                <img src="https://th.bing.com/th/id/OIP.BnLddh6SLeElHmXg44dVHQHaLz?w=185&h=296&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+1" alt="Casual Dress 1" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Floral Midi Dress</h3>
-                    <p class="text-gray-600 text-sm mb-2">Lightweight & breathable</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-900 font-bold">$49.99</span>
-                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
-                    </div>
-                </div>
+    <section id="home" class="relative bg-[#1a1a1a] py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left md:w-1/2 mb-12 md:mb-0">
+                <p class="text-[#ff7e00] text-lg font-medium mb-2">Hello, I'm a</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-4">Website Creator</h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-md mx-auto md:mx-0">
+                    I'm a passionate website creator with a focus on building intuitive and engaging web experiences.
+                </p>
+                <button class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Hire Me
+                </button>
             </div>
-            <!-- Product Card 2 -->
-            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-                <img src="https://th.bing.com/th/id/OIP.Bs6kCkfeFWSJx6R6FOrEDAHaLz?w=185&h=296&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+2" alt="Casual Dress 2" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Denim Jumpsuit</h3>
-                    <p class="text-gray-600 text-sm mb-2">Effortless style</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-900 font-bold">$65.00</span>
-                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product Card 3 -->
-            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-                <img src="https://th.bing.com/th/id/OIP.C-HQBIHPwIMPd9ojnDIU6wHaMl?w=185&h=315&c=7&r=0&o=5&pid=1.7?text=Dress+3" alt="Casual Dress 3" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Striped Maxi Dress</h3>
-                    <p class="text-gray-600 text-sm mb-2">Perfect for summer</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-900 font-bold">$55.50</span>
-                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product Card 4 -->
-            <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-                <img src="https://tse3.mm.bing.net/th/id/OIP.h4J3MN0sDo8RVMZECstoXgHaLG?pid=ImgDet&w=186&h=279&c=7&o=7&rm=3?text=Dress+4" alt="Casual Dress 4" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Boho Mini Dress</h3>
-                    <p class="text-gray-600 text-sm mb-2">Festival ready</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-900 font-bold">$45.00</span>
-                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-             <!-- Product Card 5 -->
-             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-                <img src="https://th.bing.com/th/id/OIP.Jh_EaHMXuNG0QT_llT353QHaLH?w=185&h=278&c=7&r=0&o=7&pid=1.7&rm=3?text=Dress+5" alt="Casual Dress 5" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 text-lg mb-1">Cotton Shirt Dress</h3>
-                    <p class="text-gray-600 text-sm mb-2">Versatile & comfy</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-900 font-bold">$59.99</span>
-                        <button class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full hover:bg-gray-700 transition-colors">Add to Cart</button>
-                    </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg- bg-black from-[#ff7e00] to-[#ffc107] shadow-2xl">
+                    <img src="https://i.postimg.cc/cLW0QkmD/image.png?text=Your+Image" alt="Website Creator" class="absolute inset-0 w-full h-full object-cover object-center transform scale-110">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trending Colors Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Trending Colors</h2>
-        <div class="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
-            <!-- Color Swatch 1 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #ef4444;">
-                Red
-            </div>
-            <!-- Color Swatch 2 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #3b82f6;">
-                Blue
-            </div>
-            <!-- Color Swatch 3 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-gray-900 font-semibold text-sm" style="background-color: #facc15;">
-                Yellow
-            </div>
-            <!-- Color Swatch 4 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #10b981;">
-                Green
-            </div>
-            <!-- Color Swatch 5 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #8b5cf6;">
-                Purple
-            </div>
-            <!-- Color Swatch 6 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-gray-900 font-semibold text-sm" style="background-color: #f87171;">
-                Coral
-            </div>
-            <!-- Color Swatch 7 -->
-            <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md flex items-center justify-center text-center text-white font-semibold text-sm" style="background-color: #6b7280;">
-                Charcoal
+   
+    <section id="services" class="bg-[#1a1a1a] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4l-1-1 1-6h5l2-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v7a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Web Design</h3>
+                    <p class="text-gray-400">Crafting visually appealing and functional website layouts.</p>
+                </div>
+                
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 00-2 2v4a2 2 0 002 2m0-6h.01M6 18h.01M18 18h.01M16 12a2 2 0 00-2 2v4a2 2 0 002 2m0-6h.01M6 12a2 2 0 00-2 2v4a2 2 0 002 2m0-6h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Front-end Development</h3>
+                    <p class="text-gray-400">Building interactive and responsive user interfaces using code.</p>
+                </div>
+               
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Back-end Development</h3>
+                    <p class="text-gray-400">Developing server-side logic and database management for web applications.</p>
+                </div>
+                
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.343l-.707-.707m12.728 0l-.707.707M12 21v-1m-4.636-1.636l-.707.707M5.636 5.636l.707.707m12.728 0l-.707.707M6.343 17.657l-.707.707M17.657 6.343l.707-.707m-1.414-1.414l.707-.707M12 12a4 4 0 110 8 4 4 0 010-8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Full-Stack Development</h3>
+                    <p class="text-gray-400">Handling both front-end and back-end aspects of web development.</p>
+                </div>
+                
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Website Maintenance</h3>
+                    <p class="text-gray-400">Ensuring websites are up-to-date, secure, and performing optimally.</p>
+                </div>
+                <div class="bg-[#2a2a2a] rounded-xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-[#ff7e00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Web Hosting & Deployment</h3>
+                    <p class="text-gray-400">Assisting with setting up hosting and deploying websites online.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Explore Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-white">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            EXPLORE OUR COLLECTIONS
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Explore Card 1 -->
-            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
-                <img src="https://th.bing.com/th/id/OIP.JDCKl4gRzFqB3HxAXxuH9gHaLX?w=185&h=284&c=7&r=0&o=7&pid=1.7&rm=3?text=Dresses" alt="Dresses Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <p class="text-white text-2xl font-bold">DRESSES</p>
+    <section id="about" class="bg-[#1a1a1a] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 flex justify-center md:justify-start mb-12 md:mb-0">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-[#ff7e00] to-[#ffc107] shadow-2xl">
+                    <img src="https://i.postimg.cc/cLW0QkmD/image.png?text=Your+Image" alt="About Me" class="absolute inset-0 w-full h-full object-cover object-center transform scale-110">
                 </div>
-            </a>
-            <!-- Explore Card 2 -->
-            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
-                <img src="https://th.bing.com/th/id/OIP.lp7cGxPeQgJMFY2JLb6r7gHaLH?w=127&h=191&c=7&r=0&o=5&pid=1.7?text=Tops" alt="Tops Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <p class="text-white text-2xl font-bold">TOPS</p>
-                </div>
-            </a>
-            <!-- Explore Card 3 -->
-            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
-                <img src="https://th.bing.com/th/id/OIP.nW8Va2jR-Ot0F3Sf99TmogHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7?text=Bottoms" alt="Bottoms Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <p class="text-white text-2xl font-bold">BOTTOMS</p>
-                </div>
-            </a>
-            <!-- Explore Card 4 -->
-            <a href="#" class="block group relative h-48 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
-                <img src="https://th.bing.com/th/id/OIP.p36AC1X02jMtPDsAApsW8wHaJ6?w=185&h=248&c=7&r=0&o=5&pid=1.7?text=Outerwear" alt="Outerwear Collection" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <p class="text-white text-2xl font-bold">OUTERWEAR</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    
-
-    <!-- Why Shop With Us Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            WHY YOU'LL LOVE TO SHOP WITH US
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature Card 1 -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
-                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895-3-2z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Products</h3>
-                <p class="text-gray-600">We source only the finest materials to ensure lasting quality and comfort.</p>
             </div>
-            <!-- Feature Card 2 -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
-                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Secure Payments</h3>
-                <p class="text-gray-600">Shop with confidence using our secure and encrypted payment gateways.</p>
-            </div>
-            <!-- Feature Card 3 -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
-                <svg class="w-16 h-16 text-gray-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                </svg>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Excellent Support</h3>
-                <p class="text-gray-600">Our dedicated customer service team is here to assist you 24/7.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Picks Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-900 text-white">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">TRENDING PICKS</h2>
-        <div class="relative w-full max-w-4xl mx-auto h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.cbEXkheihyoubXP3SwpUfwHaFA?pid=ImgDet&w=186&h=126&c=7&o=7&rm=3?text=Your+Only+Limit+Is+Your+Imagination" alt="Trending Picks" class="w-full h-full object-cover object-center opacity-70">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <p class="text-lg md:text-xl font-medium mb-2 hero-text-shadow">YOUR ONLY LIMIT IS</p>
-                <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight hero-text-shadow">
-                    YOUR IMAGINATION
-                </h3>
-                <button class="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                    SHOP NOW
+            <div class="text-center md:text-left md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    Hello! I'm a dedicated website creator with a passion for building meaningful and user-centered digital experiences. With X years of experience in the field, I specialize in transforming complex problems into elegant and intuitive websites. My expertise spans across web design, front-end and back-end development, ensuring a holistic approach to website creation.
+                </p>
+                <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-[#ff7e00] rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">10+</span>
+                        </div>
+                        <span class="text-white text-lg">Years Experience</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-[#ff7e00] rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">250+</span>
+                        </div>
+                        <span class="text-white text-lg">Project Completed</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-[#ff7e00] rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">99%</span>
+                        </div>
+                        <span class="text-white text-lg">Client Satisfaction</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-[#ff7e00] rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">50+</span>
+                        </div>
+                        <span class="text-white text-lg">Awards Won</span>
+                    </div>
+                </div>
+                <button class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Download CV
                 </button>
             </div>
         </div>
     </section>
-     <!-- New E-commerce Card Section -->
-    <section class="py-12 px-4 md:px-8 lg:px-16 bg-gray-100 flex justify-center items-center">
-        <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Discover Your Dream Dress!</h3>
-            <p class="text-gray-600 mb-6">Enter your email to get exclusive updates on new dress arrivals and special offers.</p>
-            <form class="flex flex-col sm:flex-center gap-4">
-                <input type="email" placeholder="type your email here"
-                       class="flex-grow p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-800 placeholder-gray-400">
-                <button type="submit" class="bg-gray-900 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-gray-700 transition-colors duration-300">
-                    Submit
-                </button>
-            </form>
+
+    <section id="portfolio" class="bg-[#1a1a1a] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Portfolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+1" alt="Portfolio Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Creative Web Design</h3>
+                        <p class="text-gray-400 text-sm">Web Design, UI/UX</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="https://stunning-flan-a212c9.netlify.app/" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+2" alt="Portfolio Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">E-commerce Development</h3>
+                        <p class="text-gray-400 text-sm">Front-end, Back-end</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="https://stupendous-puppy-1fa95d.netlify.app/" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+3" alt="Portfolio Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Custom Web Application</h3>
+                        <p class="text-gray-400 text-sm">Full-Stack Development</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+4" alt="Portfolio Project4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Responsive Website Build</h3>
+                        <p class="text-gray-400 text-sm">Front-end, Responsive Design</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="https://gorgeous-mandazi-d31d55.netlify.app/" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+5" alt="Portfolio Project 5 " class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Website Optimization</h3>
+                        <p class="text-gray-400 text-sm">Performance, SEO</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+                <div class="relative bg-[#2a2a2a] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                    <img src="https://placehold.co/600x400/3a3a3a/f0f0f0?text=Project+6" alt="Portfolio Project 6" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Content Management Systems</h3>
+                        <p class="text-gray-400 text-sm">CMS Integration, Customization</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="https://stupendous-puppy-1fa95d.netlify.app/" class="bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-2 px-6 rounded-full">View Project</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-      <!-- FAQs Section -->
-    <section id="faqs-section" class="py-12 px-4 md:px-8 lg:px-8 bg-white">
-        <h2 class="text-3xl md:text-2xl font-bold text-gray-900 text-center mb-12">
-            FREQUENTLY ASKED QUESTIONS
-        </h2>
-        <div class="max-w-2xl mx-auto space-y-6">
-            <!-- FAQ Item 1 -->
-            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div class="faq-question flex justify-between items-center cursor-pointer">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-0">What is your return policy?</h3>
-                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">We offer a 30-day return policy for all unworn and unwashed items with original tags attached. Please see our Shipping & Returns page for more details.</p>
-                </div>
-            </div>
-            <!-- FAQ Item 2 -->
-            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div class="faq-question flex justify-between items-center cursor-pointer">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-0">How long does shipping take?</h3>
-                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Standard shipping typically takes 5-7 business days. Expedited options are available at checkout for faster delivery.</p>
-                </div>
-            </div>
-            <!-- FAQ Item 3 -->
-            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div class="faq-question flex justify-between items-center cursor-pointer">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-0">Do you offer international shipping?</h3>
-                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Yes, we ship internationally to most countries. Shipping costs and delivery times vary by destination and will be calculated at checkout.</p>
-                </div>
-            </div>
-            <!-- FAQ Item 4 -->
-            <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div class="faq-question flex justify-between items-center cursor-pointer">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-0">How can I track my order?</h3>
-                    <i class="fas fa-plus faq-icon text-gray-600 text-lg"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-gray-600 mt-3 pt-2 border-t border-gray-200">Once your order has shipped, you will receive a confirmation email with a tracking number. You can use this number on our "Track Your Order" page.</p>
-                </div>
-            </div>
-            <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqQuestions = document.querySelectorAll('.faq-question');
 
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling; // Get the next sibling, which is the faq-answer div
-                    const icon = question.querySelector('.faq-icon');
-
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                        icon.classList.remove('rotate');
-                    } else {
-                        answer.style.display = 'block';
-                        icon.classList.add('rotate');
-                    }
-                });
-            });
-        });
-    </script>
-
-    <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-12 px-4 md:px-8 lg:px-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <!-- Shop Column -->
-            <div>
-                <h4 class="text-lg font-semibold text-white mb-4">SHOP</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">New Arrivals</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Dresses</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Tops</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Bottoms</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Sale</a></li>
-                </ul>
-            </div>
-
-            <!-- About Column -->
-            <div>
-                <h4 class="text-lg font-semibold text-white mb-4">ABOUT</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Our Story</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Careers</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Sustainability</a></li>
-                </ul>
-            </div>
-
-            <!-- Help Column -->
-            
-           <div>
-                <h4 class="text-lg font-semibold text-white mb-4">HELP</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#faqs-section" class="hover:text-white transition-colors duration-200">FAQs</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Shipping & Delivery</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Returns & Exchanges</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors duration-200">Size Guide</a></li>
-                </ul>
-            </div>
-
-
-
-
-            <!-- Contact & Social Column -->
-            <div>
-                <h4 class="text-lg font-semibold text-white mb-4">CONTACT US</h4>
-                <p class="text-sm mb-2">Email: support@lizzie.com</p>
-                <p class="text-sm mb-4">Phone: +254 (0707170030)</p>
-                <div class="flex space-x-4">
-                    <a href="https://tse1.mm.bing.net/th/id/OIP.1inQtfBa5Hk-kiN1SE0stgHaHa?pid=ImgDet&w=186&h=186&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="https://tse4.mm.bing.net/th/id/OIP.zvSmXMXm2kzd7rTtpc50UgHaEK?pid=ImgDet&w=186&h=105&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="https://tse3.mm.bing.net/th/id/OIP.2mXmCN5ZhqsMKkXeP6jPagAAAA?pid=ImgDet&w=186&h=186&c=7&o=7&rm=3" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
-                    
-                </div>
+    <section id="contact" class="bg-[#1a1a1a] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Contact Me</h2>
+            <div class="max-w-4xl mx-auto bg-[#2a2a2a] rounded-xl p-8 shadow-xl">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Project Timeline (e.g., 2-4 weeks)" class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]">
+                        </div>
+                        <div>
+                            <select class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]">
+                                <option value="" disabled selected>Services Interested In</option>
+                                <option value="web-design">Web Design</option>
+                                <option value="front-end">Front-end Development</option>
+                                <option value="back-end">Back-end Development</option>
+                                <option value="full-stack">Full-Stack Development</option>
+                                <option value="maintenance">Website Maintenance</option>
+                                <option value="hosting">Web Hosting & Deployment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea placeholder="Project Details" rows="4" class="w-full p-4 rounded-lg bg-[#3a3a3a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff7e00]"></textarea>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 flex justify-end">
+                        <button type="submit" class="w-auto bg-[#ff7e00] hover:bg-[#e66a00] text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="border-t border-gray-700 pt-8 text-center text-sm">
-            &copy; 2025 LIZZIE. All rights reserved.
+    </section>
+
+    <section id="logo-text" class="bg-[#1a1a1a] py-16 md:py-24 px-4 md:px-8 lg:px-16 text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#ff7e00]">
+                WebDev
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1a1a1a] py-8 px-4 md:px-8 lg:px-16 text-center text-gray-500">
+        <div class="max-w-5xl mx-auto">
+            <nav class="mb-8">
+                <ul class="flex flex-wrap justify-center space-x-6 md:space-x-8 text-white">
+                    <li><a href="#home" class="hover:text-[#ff7e00] transition duration-300">Home</a></li>
+                    <li><a href="#services" class="hover:text-[#ff7e00] transition duration-300">Services</a></li>
+                    <li><a href="#about" class="hover:text-[#ff7e00] transition duration-300">About Me</a></li>
+                    <li><a href="#portfolio" class="hover:text-[#ff7e00] transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-[#ff7e00] transition duration-300">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#ff7e00] transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#ff7e00] transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.676-.207.676-.463 0-.228-.008-.83-.013-1.624-2.782.603-3.369-1.34-3.369-1.34-.454-1.154-1.107-1.462-1.107-1.462-.908-.618.069-.606.069-.606 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.829.091-.645.351-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.949 0-1.092.39-1.984 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.268 2.75 1.025A9.435 9.435 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.025 2.747-1.025.546 1.379.202 2.398.099 2.651.64.698 1.028 1.59 1.028 2.682 0 3.843-2.339 4.69-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .257.206.553.683.456C20.137 20.218 23 16.46 23 12.017 23 6.484 18.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#ff7e00] transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.102.046 2.571.162 3.525.932 4.381 1.788.856.856 1.626 1.809 1.787 4.38.034.318.046.67.046 3.102V12c0 2.43-.013 2.784-.046 3.102-.162 2.57-1.626 3.525-1.787 4.38-.856.856-1.809 1.626-4.38 1.788-.318.034-.67.046-3.102.046S9.284 22 8.966 21.967c-2.57-.162-3.525-.932-4.38-1.788-.856-.856-1.627-1.809-1.788-4.38C2.013 15.284 2 14.932 2 12.315V12c0-2.43.013-2.784.046-3.102.162-2.57 1.626-3.525 1.788-4.38.856-.856 1.809-1.626 4.38-1.788.318-.034.67-.046 3.102-.046zm0 1.5h-.01c-2.43 0-2.784.013-3.102.046-2.57.162-3.525.932-4.38 1.788-.856.856-1.627 1.809-1.788 4.38C3.513 15.284 3.5 14.932 3.5 12.315V12c0-2.43.013-2.784.046-3.102.162-2.57 1.626-3.525 1.788-4.38.856-.856 1.809-1.626 4.38-1.788.318-.034.67-.046 3.102-.046zM12 16a4 4 0 100-8 4 4 0 000 8zm0-1.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zM16.5 6A1.5 1.5 0 1115 4.5 1.5 1.5 0 0116.5 6z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+             
+            <p class="text-sm">&copy; 2025 Web Creator. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
 </html>
+<script>
+    // Mobile menu toggle
+    document.querySelector('button').addEventListener('click', function() {
+        const navLinks = document.querySelector('nav ul');
+        navLinks.classList.toggle('hidden');
+    });
